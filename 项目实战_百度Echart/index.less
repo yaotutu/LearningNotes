@@ -1,0 +1,159 @@
+// 声明字体
+@font-face {
+  font-family: electronicFont;
+  src: url(./font/DS-DIGIT.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // 告诉浏览器,盒子的大小包括了padding和border.,
+  // 默认的盒子大小,不包括padding
+  list-style: none;
+  // 清除list标签前面的小⭕️
+}
+
+body {
+  line-height: 1.15;
+  background: url(./images/bg.jpg) no-repeat top center;
+  //   noreapt不会被重复出现
+}
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(./images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+  h1 {
+    font-size: 0.475rem;
+    color: white;
+    text-align: center;
+    line-height: 1rem;
+  }
+  .showTime {
+    line-height: 0.9375rem;
+    right: 0.375rem;
+    color: rgba(255, 255, 255, 0.7);
+    //   color 用于设置字体,bgcolor用于设置背景颜色
+    position: absolute;
+    //   相对定位:假设浏览器按照显示位置应该显示在 坐标(10.10)的位置,
+    // 这个时候你对他做了向上偏移2个单位,他的坐标就是(10,8)
+    //   重叠的时候可以利用z-index来指定哪个元素显示在上面.z-index越大,优先级越高
+    // 这两个元素都要是relative才行
+    //   绝对定位: 若父级元素设置了relative,则他将按照父级元素的位置,进行位置变换.
+    // 若父级元素没有realitive, 则将继续往上找,最后都没有的话会按照跟元素进行位置变换
+    //   fied定位. 将元素固定在某一位置.滚动屏幕将不会改变位置信息
+    top: 0;
+  }
+}
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 0.125rem;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  .column1 {
+    flex: 3;
+    background-color: green;
+    h2 {
+      height: 0.6125rem;
+      color: white;
+      line-height: 0.6rem;
+      font-size: 0.25rem;
+      text-align: center;
+    }
+    .chart {
+      height: 3rem;
+      background-color: pink;
+    }
+  }
+  .column2 {
+    flex: 5;
+    margin-left: 0.125rem;
+    margin-right: 0.125rem;
+    .no {
+      background-color: rgba(101, 132, 226, 0.1);
+      .no_top {
+        border: 1px solid rgba(25, 186, 139, 0.17);
+        ul {
+          display: flex;
+          li {
+            flex: 5;
+            height: 1rem;
+            font-size: 0.875rem;
+            color: #ffeb7b;
+            text-align: center;
+            font-family: "electronicFont";
+          }
+        }
+      }
+      .no_bottom {
+        ul {
+          display: flex;
+          li {
+            height: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            flex: 1;
+            text-align: center;
+            font-size: 0.225rem;
+            margin-top: 0.125rem;
+            margin-bottom: 0.125rem;
+          }
+        }
+      }
+    }
+    .map {
+      height: 10.125rem;
+      position: relative;
+      .map1 {
+        width: 6.475rem;
+        height: 6.475rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(./images/map.png);
+        opacity: 0.3;
+        background-size: 100% 100%;
+        // 加上该属性,可以让地球随着盒子的变化而变化,也就是适应不同尺寸的屏幕
+        // 原理就是图片始终撑满盒子,当盒子自动变化时, 背景图片也跟着发生变化
+      }
+      .map2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8.0375rem;
+        height: 8.0375rem;
+        background: url(./images/lbx.png);
+        background-size: 100% 100%;
+      }
+    }
+  }
+  .column3 {
+    flex: 3;
+    background-color: gainsboro;
+    h2 {
+      height: 0.6125rem;
+      color: white;
+      line-height: 0.6rem;
+      font-size: 0.25rem;
+      text-align: center;
+    }
+    .chart {
+      height: 3rem;
+      background-color: pink;
+    }
+  }
+  .panel {
+    height: 3.875rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    padding-top: 0px;
+    padding-left: 0.1875rem;
+    padding-right: 0.1875rem;
+    padding-bottom: 0.5rem;
+    background: url(./images/line\(1\).png) rgba(255, 255, 255, 0.04);
+  }
+}

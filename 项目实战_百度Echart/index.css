@@ -1,0 +1,140 @@
+@font-face {
+  font-family: electronicFont;
+  src: url(font/DS-DIGIT.TTF);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  line-height: 1.15;
+  background: url(images/bg.jpg) no-repeat top center;
+}
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+header h1 {
+  font-size: 0.475rem;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+}
+header .showTime {
+  line-height: 0.9375rem;
+  right: 0.375rem;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 0;
+}
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 0.125rem;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+}
+.mainbox .column1 {
+  flex: 3;
+  background-color: green;
+}
+.mainbox .column1 h2 {
+  height: 0.6125rem;
+  color: white;
+  line-height: 0.6rem;
+  font-size: 0.25rem;
+  text-align: center;
+}
+.mainbox .column1 .chart {
+  height: 3rem;
+  background-color: pink;
+}
+.mainbox .column2 {
+  flex: 5;
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+}
+.mainbox .column2 .no {
+  background-color: rgba(101, 132, 226, 0.1);
+}
+.mainbox .column2 .no .no_top {
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.mainbox .column2 .no .no_top ul {
+  display: flex;
+}
+.mainbox .column2 .no .no_top ul li {
+  flex: 5;
+  height: 1rem;
+  font-size: 0.875rem;
+  color: #ffeb7b;
+  text-align: center;
+  font-family: "electronicFont";
+}
+.mainbox .column2 .no .no_bottom ul {
+  display: flex;
+}
+.mainbox .column2 .no .no_bottom ul li {
+  height: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  flex: 1;
+  text-align: center;
+  font-size: 0.225rem;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+.mainbox .column2 .map {
+  height: 10.125rem;
+  position: relative;
+}
+.mainbox .column2 .map .map1 {
+  width: 6.475rem;
+  height: 6.475rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(images/map.png);
+  opacity: 0.3;
+  background-size: 100% 100%;
+}
+.mainbox .column2 .map .map2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background: url(images/lbx.png);
+  background-size: 100% 100%;
+}
+.mainbox .column3 {
+  flex: 3;
+  background-color: gainsboro;
+}
+.mainbox .column3 h2 {
+  height: 0.6125rem;
+  color: white;
+  line-height: 0.6rem;
+  font-size: 0.25rem;
+  text-align: center;
+}
+.mainbox .column3 .chart {
+  height: 3rem;
+  background-color: pink;
+}
+.mainbox .panel {
+  height: 3.875rem;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  padding-top: 0px;
+  padding-left: 0.1875rem;
+  padding-right: 0.1875rem;
+  padding-bottom: 0.5rem;
+  background: url(images/line\(1\).png) rgba(255, 255, 255, 0.04);
+}
