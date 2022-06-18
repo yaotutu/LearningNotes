@@ -8,9 +8,13 @@
 </template>
 
 <script>
+import Mheader from "./components/Mheader"
+import SideBar from "./components/SideBar"
+import PageBoard from "./components/PageBoard"
+import "./assets/css/common.css"
 export default {
   name: 'App',
-  comments: {
+  components: {
     Mheader,
     SideBar,
     PageBoard
